@@ -1,0 +1,88 @@
+/*预设*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+button,
+input,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.inner {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+footer {
+	background: #F0F0F0;
+}
+
+footer .inner {
+	padding: 10px 20px;
+}
+
+footer .ro {
+	text-align: center;
+	height: 50px;
+	line-height: 60px;
+	margin: 20px 0;
+	padding: 10px 0;
+}
+
+footer .ro span {
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	font-size: 25px;
+	vertical-align: top;
+	font-weight: bold;
+	color: #8C8C8C;
+}
+
+footer .ro a {
+	display: inline-block;
+	height: 40px;
+	padding: 0 20px;
+}
+
+footer .ro a img {
+	height: 100%;
+}
+
+section.bot {
+	background: #8C8C8C;
+	padding: 5px 20px;
+}
+
+section.bot p {
+	line-height: 16px;
+	font-size: 12px;
+	text-align: center;
+}

@@ -1,0 +1,66 @@
+/*预设*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+button,
+input,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.inner {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+section.chart {
+	background: #CCCBBA;
+	overflow: hidden;
+	padding: 20px 0 50px;
+}
+
+section.chart .sector {
+	float: left;
+	margin: 30px;
+}
+
+section.chart .bar {
+	float: right;
+}
+
+#cvsS {
+	height: 400px;
+	width: 400px;
+}
+
+#cvsB {
+	height: 450px;
+	width: 600px;
+}
