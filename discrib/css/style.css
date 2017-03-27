@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{background:#000;}
+html,body{height:100%;}
+.star{height:200px; width:200px; box-shadow:0 0 10px #fff;color:#fff; margin:100px auto; display:inline-block; animation: actionOne 5s ease infinite; position:absolute; left:50px; top:20px; transform-style:preserve-3d;}
+.star i{animation:actOne 10s ease infinite; display:inline-block;}
+@keyframes actOne
+{25%{transform:translate(188px,0) rotateX(720deg) rotateY(0);}
+ 50%{transform:translate(188px,188px) rotateX(720deg) rotateY(720deg) }
+ 75%{transform:translate(0,188px) rotateX(0) rotateY(720deg)}
+ 100%{transform:translate(0,0) rotateX(0) rotateY(0)}
+}
+
+.block{height:200px; width:200px; margin:100px 0 0 20%; transform-style:preserve-3D; position:relative; perspective-origin:50% 50%; animation:actTwo 50s linear infinite; position:absolute; left:200px; top:20px;}
+.block li{height:200px; width:200px; line-height:200px; text-align:center; position:absolute; box-shadow:0 0 5px #fff,0 0 10px #fff,0 0 15px #fff;}
+.block li:nth-child(1){background:rgba(0,102,255,0.5); transform:rotateX(90deg) translateZ(100px);}
+.block li:nth-child(2){background:rgba(0,255,0,0.5); transform:rotateX(90deg) translateZ(-100px);}
+.block li:nth-child(3){background:rgba(255,255,0,0.5); transform:rotateY(90deg) translateZ(100px);}
+.block li:nth-child(4){background:rgba(153,0,255,0.5); transform:rotateY(90deg) translateZ(-100px);}
+.block li:nth-child(5){background:rgba(255,0,0,0.5); transform:translateZ(100px);}
+.block li:nth-child(6){background:rgba(255,255,255,0.9); transform:translateZ(-100px);}
+
+@keyframes actTwo{50%{transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg)}}
+
+.box{height:200px; width:200px; margin:100px 0 0 600px; transform-style:preserve-3D; position:relative; perspective-origin:50% 50%; animation:actThree 50s ease infinite; position:absolute; left:200px; top:20px; box-shadow:0 0 10px #fff; overflow:hidden;}
