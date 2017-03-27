@@ -40,7 +40,7 @@ function checkCache(){
 
 (function(){
 	getPlayLists(9, function(data){
-		console.log(data);
+		
 
 		var songlist = $("#songlist");
 		

@@ -58,6 +58,7 @@ $(function(){
 		route("hello")
 	}else {
 		route("tab");
+		route('player',$('#global'))
 	}
 });
 
