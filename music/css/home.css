@@ -152,4 +152,12 @@ img.auto {
 	padding: 0 10px;
 	cursor: pointer;
 }
-.tishi{position: absolute;top: 10px; left: 0 ; right: 0; text-align: center;}
+
+.tishi {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: wheat;
+}
