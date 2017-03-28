@@ -1,7 +1,7 @@
 function play(data){
 	$.ajax({
 			type:"get",
-			url:"http://musicapi.duapp.com/api.php?type=url&id="+data.id,
+			url:"https://musicapi.duapp.com/api.php?type=url&id="+data.id,
 			async:true,
 			success: function(data){
 				console.log(data)

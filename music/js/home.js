@@ -1,4 +1,4 @@
-var server = "http://musicapi.duapp.com/api.php";
+var server = "https://musicapi.duapp.com/api.php";
 
 function getPlayLists(limit, callback){
 	limit = limit || 12;
