@@ -36,7 +36,7 @@
 //			};
 			$template.data('music', data.tracks[i]);
 			$template.click(function(){
-				
+				$('.tishi').text('加载中………………')
 				var music = $(this).data('music');
 				console.log(music)
 				play(music)
