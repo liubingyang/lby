@@ -53,7 +53,7 @@ window.onload = function() {
 	gradient.addColorStop("1.0", "red");
 	ctx.strokeStyle = gradient;
 	ctx.font
-	ctx.strokeText('鼠标拖动旋转，滑轮控制景深，不过效果并不理想，很遗憾', 250, 15)
+	ctx.strokeText('鼠标拖动旋转，滑轮控制景深，不过效果并不理想，有待完善', 250, 15)
 	ctx.stroke()
 
 }
