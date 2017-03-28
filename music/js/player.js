@@ -1,12 +1,11 @@
 function play(data){
 	$.ajax({
 			type:"get",
-			url:"http://musicapi.duapp.com/api.php?type=url&id="+data.id,			
-			dataType: 'jsonp',
-			jsonp:"jsonpcallback",
+			url:"https://musicapi.duapp.com/api.php?type=url&id="+data.id,			
 			success: function(data){
 				console.log(data)
-				$('#myvideo')[0].src=data.data[0].url;
+				var url=data.data[0].url.replace(/http/,'https')
+				$('#myvideo')[0].src=url;
 				$('#myvideo')[0].play();				
 			}
 	});	
