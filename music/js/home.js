@@ -4,6 +4,7 @@ function getPlayLists(limit, callback){
 	limit = limit || 12;
 	
 	if (checkCache()){
+		$('#com').text('')
 		// 访问缓存
 		callback(JSON.parse( localStorage.playlists ));
 		console.log("访问缓存");
@@ -16,6 +17,8 @@ function getPlayLists(limit, callback){
 			success: function(data){
 				
 				if (data.code == 200){
+					console.log(1)
+					$('#com').text('')
 					// 缓存
 					data.playlists.cacheTime = new Date().getTime();
 					localStorage.playlists = JSON.stringify( data.playlists );

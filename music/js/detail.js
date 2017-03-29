@@ -8,7 +8,7 @@
 			url:"https://api.imjad.cn/cloudmusic/?type=playlist&id="+id,
 			async:true,
 			success: function(data){
-				
+				$('#com').hide()
 				if (data.code==200)
 					callback(data.playlist);
 			}
@@ -36,6 +36,7 @@
 //			};
 			$template.data('music', data.tracks[i]);
 			$template.click(function(){
+				
 				$('.tishi').text('加载中………………')
 				var music = $(this).data('music');
 				console.log(music)

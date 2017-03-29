@@ -56,7 +56,7 @@ body {
 .tit a {
 	color: wheat;
 }
-
+#com{color: black; background: transparent; position: absolute; left: 0; right: 0; top: 50%; font-size: 30px;}
 .discrib {
 	line-height: 30px;
 	text-align: center;
