@@ -1,0 +1,117 @@
+*{transition: all .5s; font-family: Arial;}
+/*改变所有a标签hover状态*/
+a:hover,a:focus{text-decoration: none;}
+/*顶部*/
+header{line-height: 2; background: #1f262e; color:#9f9d9e;}
+header a{color:#9f9d9e;text-align: center}
+header .left>a{padding: 0 0;}
+/*导航栏*/
+.top{line-height: 82px; background: #282f37;}
+.top .navs a{padding: 0; cursor: pointer; color: white;}
+.top .navs a:hover,.top .navs a:active{color: #00CCCC;}
+.top .search{padding: 0;}
+.top .search a{color: #9f9d9e; border-left:1px solid  #9f9d9e; padding:0 15px;}
+/*大图*/
+.banner{height: 600px; background: #f14949;}
+.banner .pic{padding-top: 60px; margin-left: -52px; width: 100%;}
+.banner .pic img{width: 100%;}
+.banner .fonts{color: white; padding: 156px 0 0 60px; }
+.banner .fonts h2{ font-size: 50px; margin-right: -103px; }
+.banner .fonts p{line-height: 24px; padding-top: 31px; font-size: 16px;}
+/*some段落*/
+.some{padding: 46px 15px 108px;}
+.some h2{color: #f44546}
+.some p{line-height: 25px; padding-bottom: 82px;}
+/*四张小图上的标题及按钮组合*/
+.some .some_tit1{font-weight: bold; line-height: 36px;}
+.some .some_tit2 .btn{border-color: #f14949;}
+.some .some_tit2 .btn:hover,.some .some_tit2 .btn:focus{background-color:#f14949; color: white;}
+/*四张小图*/
+.some .imgs{padding-top:46px; }
+.some .imgs a{color: #000;}
+.some .imgs a:hover,.some .imgs a:focus{color: white}
+.some .imgs>div>div{background: #ebebeb; padding: 0; border-radius: 4px;}
+.some .imgs>div>div:hover{background: #f14949;}
+.some .imgs .pic{padding: 0}
+.some .imgs>div>div img{background: transparent; border: none;width: 100%;}
+.some .imgs .cont h4{font-size: 20px; line-height: 1.5;}
+/*视差滚动*/
+.runimg{height: 375px; background: url(../images/image11.jpg) fixed no-repeat;  color: white; padding: 61px 0 85px 0;}
+.runimg h2{line-height: 77px;}
+.runimg p{line-height: 25px; padding-bottom: 34px;}
+.runimg .btn{background: transparent; color: white; display: table-cell;}
+/*新闻及服务*/
+.server{padding: 75px 0 110px;}
+.server .top1 .pic{height: 54px; width: 54px; background: #f14949; text-align: center;
+    line-height: 62px; font-size: 40px; padding: 0; border-radius: 6px; color: white;}
+.server .top1 h3{margin: 10px 0; line-height: 28px;}
+.server .top1 p{line-height: 21px;}
+.server .bot .news div{margin-bottom: 40px; padding: 0}
+.server .bot .service h4{background: #f14949; color: white; line-height: 40px; }
+.server .bot .service p{line-height: 20px;}
+.server .bot .service h5{background: #d3d3d3; line-height: 40px;}
+/*团队部分*/
+.team{background:#f14949; color: white; padding: 24px 0;}
+.team p{font-size: 12px; line-height: 19px; width: 80%; padding-bottom: 48px; margin: 0 auto;}
+.team .pic{padding-bottom: 10px;}
+footer{background: #282f37; color: white; padding: 75px}
+
+@media screen and (max-width: 1200px) {
+    .banner .fonts h2{ font-size: 35px;}
+}
+@media screen and (max-width: 992px) {
+    header .right{display: none}
+    .banner{height: auto}
+    .banner .pic{padding-top: 10px; margin-left: 0;}
+    .banner .fonts h2{ font-size: 30px; margin-right: 0; }
+    .banner .fonts p{line-height: 24px; padding-top: 10px;}
+    .banner .fonts{padding:0; }
+    .some p{padding-bottom: 40px;}
+    .some .imgs .cont{padding: 30px 0;}
+    .some .imgs>div{margin-bottom:10px;}
+    .runimg{height: 200px; padding: 20px 0 10px 0}
+    .runimg h2{line-height: 35px; font-size: 35px;}
+    .runimg p{font-size: 16px;}
+    .server .bot .news div{margin-bottom: 10px;}
+    .team img{width: 100%;}
+
+}
+@media screen and (max-width: 768px) {
+    header .right{display:block}
+    header .left .font{display: none}
+    .top{line-height: 30px; font-size: 12px;}
+    .banner .fonts{text-align: center}
+    .banner .fonts h2{ font-size: 20px;}
+    .banner .fonts p{line-height: 18px; font-size: 12px;}
+    .some{padding: 12px 15px 20px;}
+    .some h2{font-size: 25px;}
+    .some p{line-height: 16px; font-size: 12px; padding-bottom: 10px;}
+    .some .imgs .cont{padding: 0;}
+    .runimg{height: 150px; padding-top:30px;}
+    .runimg h2{line-height: 40px; font-size: 23px;}
+    .runimg p{display: none}
+    .server{padding: 30px 0 ;}
+    .team p{padding-bottom: 15px;}
+    footer{padding: 20px}
+
+}
+@media screen and (max-width: 480px) {
+    .some .some_tit2{padding: 0;}
+    .some .some_tit2 .btn{font-size: 12px; padding:3px;}
+    .some .imgs{padding-top:16px;}
+    .runimg{padding-top:0;}
+    .server{padding: 10px 0 ;}
+    .server .top1 .pic{height: 27px; width: 27px; background: #f14949; text-align: center;
+        line-height: 31px; font-size: 20px;}
+    .server .top1 .fonts{margin-bottom: 10px; padding: 0; border-bottom: 1px solid #ccc;}
+    .server .top1 .fonts h3{text-align: center;}
+    .server .bot  h3,.server .bot  h4{text-align: center;}
+    .server img{width: 80%;}
+    .team{padding: 0;}
+    footer{padding: 10px}
+
+}
+@media screen and (max-width: 200px) {
+    *{display: none}
+}
+
