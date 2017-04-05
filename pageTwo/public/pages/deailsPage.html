@@ -1,0 +1,65 @@
+<div class="inner">
+    <div class="baby">
+        <h4>{{product.name}}</h4>
+        <div class="baby_in main">
+            <div class="cont">
+                <div class="left">
+                    <!--放大镜-->
+                    <div id="box1" class="pic"><img ng-src="{{product.imgSrc[0]}}"><span id="move"></span></div>
+                    <div id="box2" class="box2"><img ng-src="{{product.imgSrc[0]}}"></div>
+
+                    <div class="row"><!--放大镜小图-->
+                        <ul>
+                            <li><img ng-src="{{product.imgSrc[0]}}"> </li>
+                            <li><img ng-src="{{product.imgSrc[1]}}"> </li>
+                            <li><img ng-src="{{product.imgSrc[2]}}"> </li>
+                            <li><img ng-src="{{product.imgSrc[3]}}"> </li>
+                            <li><img ng-src="{{product.imgSrc[4]}}"> </li>
+                        </ul>
+                    </div>
+                    <div class="bot"><span>商品编号：695469</span><a href="#"><i><img src="../images/lalal_07.png"> </i>分享</a><a href="#"><i><img src="../images/lalal_09.png"></i>关注商品</a></div>
+                </div>
+                <div class="mid">
+                    <h3>{{product.title[0]}}</h3>
+                    <p>{{product.title[1]}}</p>
+                    <div class="price"><span class="left">京东价：<i id="price">{{product.price|currency:"￥"}}</i>(降价通知)</span><span class="right">累计评价<br>19999</span></div>
+                    <div class="cont">
+                        <div class="dress">
+                            配送至：<select><option value="0">北京朝阳区三环以内</option><option value="0">河南三门峡三月网吧</option></select> 有货 支持99元免运费|货到付款
+                        </div>
+                        <div class="words">服务：由京东发货， 提供售后服务。</div>
+                    </div>
+                    <!--尺寸选择-->
+                    <div class="size"><p>型号选择：</p>
+                        <ul  id="size">
+                            <li class="red"><a></a>目前没有型号可选</li>
+                        </ul>
+                    </div>
+                    <div class="num">
+                        <div class="form">
+                            <div class="tex">1</div>
+                            <div class="ad">+</div>
+                            <div id="sub">-</div>
+                        </div>
+                        <button class="car btn btn-primary" ng-click="add(product)">加入购物车</button>
+                        <em id="carts" class="hidden">商品以加入购物车</em>
+                    </div>
+                    <div>温馨提示：1.本商品不能使用 京东券  2.支持7天无理由退货</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="pic"><img ng-src="{{product.imgSrc[0]}}"> </div>
+                    <ul>
+                        <li><img src="../images/zuihou_06.jpg"> </li>
+                        <li><img src="../images/zuihou_07.jpg"> </li>
+                        <li><img src="../images/zuihou_11.jpg"> </li>
+                        <li><img src="../images/zuihou_13.jpg"> </li>
+                        <li><img src="../images/zuihou_17.jpg"> </li>
+                        <li><img src="../images/zuihou_18.jpg"> </li>
+                    </ul>
+                    <div>服务支持：夜间配  自提</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

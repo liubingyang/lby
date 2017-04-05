@@ -1,0 +1,3 @@
+.panel td img{height: 80px; width: 80px;}
+.panel tr,th{text-align: center;}
+.table > tbody > tr > td{ height: 80px; line-height: 80px;}

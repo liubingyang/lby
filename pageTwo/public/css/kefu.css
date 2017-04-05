@@ -1,0 +1,49 @@
+body{background: #ccc;}
+.container>.row{height: 600px; background: #fff;}
+.row1{background: #e45050; padding: 10px 5px; height:110px;}
+.row1_1{line-height: 20px; height: 20px; padding: 0 5px; color: #953b39; font-weight: bold;
+    font-family: "微软雅黑";}
+.col-xs-2{height: 100%; padding: 0;}
+.col-xs-4 img{height: 40px; width: 40px; margin: 5px; border-radius: 50%; border: 1px solid #ccc;}
+#img{position: relative;}
+#imgs{position: absolute; left: 60px; top: 20px; border: 1px solid #ccc; border-radius: 6px; width: 220px;
+    padding-left:0; background: #fff; z-index: 1;}
+#imgs li{list-style: none; height: 40px; width: 40px; border-radius: 50%;
+    display: inline-block; margin: 5px; overflow: hidden; border: 1px solid #ccc;}
+#imgs li img{height: 100%; width: 100%;}
+.col-xs-8{line-height: 40px; color: white; font-weight: bold;}
+form input{outline:none; width: 65%; border:none; border-left: 1px solid #ccc; height: 20px;vertical-align: top;
+    border-top-right-radius: 10px;border-bottom-right-radius: 10px; font-size: 12px; line-height: 20px; }
+form button{width: 30%; height: 20px;margin-left:5px;  border-top-left-radius: 10px;border-bottom-left-radius: 10px;
+    border: none; background: white; }
+.row2{height: 490px; background: #333;}
+.row_2{height: 60px; line-height: 60px; font-weight: bold; border-bottom: 1px solid #ccc; padding-left:20px; }
+#content{border-right:1px solid #ccc; height: 100%;}
+.row_3{height: 540px;}
+.col-xs-8,.row_3>.col-xs-4{ padding: 0;}
+.content_1{height: 400px; border-bottom: 1px solid #ccc; color: darkgreen; overflow: auto;}
+textarea{resize: none; height: 70px; width: 70%; border-radius: 10px; vertical-align: middle; margin: 30px 10px; color: #000;
+        font-size: 16px; line-height: 20px; outline:none;}
+.nav{padding-left: 20px;}
+.mid .pic{float: left;}
+.tit{height: 30px; line-height: 30px; border-bottom: 1px solid #ccc; position: relative;}
+.my_f{position: absolute; top: 2px; right: 5px; border: 1px solid #ccc; font-size: 12px; height: 25px;
+    line-height: 25px; padding: 0 3px; border-radius: 2px; cursor: pointer;}
+.words{padding: 0 5px; line-height: 20px; height: 70px; overflow: hidden; font-size: 12px;}
+.mid .pic img{border-radius: 0; height: 60px; width: 60px;}
+.price{color: red; font-size: 12px;}
+span{color: black; float: right; padding-right: 3px;}
+.my_d{border: 1px solid #ccc; margin: 10px 2px;}
+.content_1 a{cursor: pointer; font-size: 12px;}
+.content_1 ul{padding: 0;}
+.content_1 li{list-style: none; padding-left:10px; line-height: 25px;}
+.content_1 p{height: 20px; line-height: 20px; font-size: 14px; margin: 0;}
+.content_1 div{font-size: 12px; font-weight: normal; color: #000; margin: 0;padding: 0 10px; line-height: 20px;}
+.com_on i{float: right; height: 30px; width: 30px; border-radius: 50%; overflow: hidden;}
+.com_on i img{height: 100%; width: 100%;}
+.com_on span{ float: right; height: 30px; line-height: 30px; color: #1a1a1a;}
+.com_on .clear{height: 30px;}
+.com_on p{float: right; display: inline-block; border:2px solid #00FFFF ; font-size: 12px; margin: 4px 10px 4px 0;
+    padding: 0 5px; height: 30px; line-height: 30px; text-align: center; border-radius: 5px;}
+.com_on{height: 70px;}
+.com_on .time{border: none; padding: 0; margin: 0;}

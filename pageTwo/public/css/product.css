@@ -1,0 +1,10 @@
+a:hover{text-decoration: none;}
+a:link{text-decoration: none;}
+.panel-heading{font-size:18px; font-weight: bold; margin:20px 0 0 20px;}
+.panel-body{border: 1px solid #ccc; padding: 40px 0; margin: 20px 0;}
+.panel-body>div{border-right: 1px solid #ccc;}
+.panel-body>div:nth-child(4){border-right: none;}
+.panel-body>div:hover img{transform: translateX(-5px)}
+.panel-body img{height: 270px; width:100%; transition: all .5s;}
+.panel-body .disc{font-size: 14px; line-height: 20px; padding: 10px 0;}
+.panel-body .price{font-size: 16px; line-height: 20px; font-weight: bold;}

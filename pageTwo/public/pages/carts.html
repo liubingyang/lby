@@ -1,0 +1,30 @@
+<div class="inner panel">
+    <div class="panel-heading"> 购物车信息</div>
+        <p  style="background: #CCCCCC; margin: 50px 0; font-size: 30px; text-align: center" ng-show="search.length==0">没有商品!!</p>
+        <table ng-show="search.length>0" class="table">
+            <tr>
+                <th>商品</th>
+                <th></th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+            <tr ng-repeat="itm in search">
+                <td><img ng-src="{{itm.products.imgSrc[0]}}"></td>
+                <td>{{itm.products.disc}}</td>
+                <td>{{itm.products.price | currency :"￥"}}</td>
+                <td>{{itm.number}}</td>
+                <td>{{itm.products.price*itm.number | currency :"￥"}}</td>
+                <td><a href="javascript:;" ng-click="del(itm.products.name)">删除</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="font-size:20px; font-weight: bold">商品总数：{{sum()}}</td>
+                <td style="font-size:20px; font-weight: bold">总计：{{sum2()|currency :"￥"}}</td>
+                <td></td>
+            </tr>
+        </table>
+</div>

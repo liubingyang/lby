@@ -1,0 +1,12 @@
+    <div class="inner panel">
+        <div class="panel-heading"> 热卖商品</div>
+        <div class="panel-body row">
+            <div class="col-xs-3" ng-repeat="itm in product">
+                <a href="#/deailsPage?id={{itm.path}}">
+                    <div class="pic"><img ng-src="{{itm.imgSrc[0]}}"></div>
+                    <p class="disc">{{itm.disc}}</p>
+                    <div class="price text-danger">{{itm.price | currency:"￥"}}</div>
+                </a>
+            </div>
+        </div>
+    </div>

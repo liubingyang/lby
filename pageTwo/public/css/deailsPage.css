@@ -1,0 +1,44 @@
+.baby{height:100%; background: #f2f2f2;}
+.baby>h4{padding-left:20px; height: 45px; line-height: 45px; background: #f2f2f2; width: 1170px; margin: 0 auto; font-weight: normal;font-family: Consolas;}
+
+.baby_in{height: 475px; background: #fff; padding: 15px 15px 0; width: 1190px; border-bottom: 1px solid #f2f2f2;}
+.baby_in>.cont>.left{width: 350px; float: left; position: relative;}
+.baby_in>.cont>.left>.pic{height: 351px; width: 100%; overflow: hidden; position: relative;}
+.baby_in>.cont>.left>.pic img{height:100%; width: 100%;}
+.baby_in>.cont>.left>.pic span{height: 150px; width:100px; position: absolute; background: #ccc; opacity: 0.5; display: none;}
+.baby_in>.cont>.left .box2{height:351px; width: 350px; overflow: hidden; position:absolute; top:0; right:-350px; display: none;}
+.baby_in>.cont>.left .box2>img{width:200%; position: absolute; left: 0; top:0; z-index: 1;}
+
+.baby_in>.cont>.left>.row{height: 85px; width: 100%; overflow: hidden; position: relative; cursor: pointer;}
+.baby_in>.cont>.left>.row .pre{height: 25px; width: 14px; position: absolute; top:30px; left: 0px; background:url(../images/sss_03.png);}
+.baby_in>.cont>.left>.row .next{height: 25px; width: 14px; position: absolute; top:30px; right: 0px; background:url(../images/sssa_03.png);}
+.baby_in>.cont>.left ul{width: 200%; padding: 17px 7px;}
+.baby_in>.cont>.left li{height: 50px; width: 50px; display: inline-block; margin: 0 7px; overflow: hidden;}
+.baby_in>.cont>.left li img{height: 100%; width: 100%;}
+.baby_in>.cont>.left> .bot a{float:  right;}
+.baby_in>.cont>.left> .bot{line-height: 24px; }
+.baby_in>.cont>.mid{width: 590px; margin: 0 1px; float: left;}
+.baby_in>.cont>.mid>h2{line-height: 26px;}
+.baby_in>.cont>.mid>p{line-height: 24px; color: red; margin-bottom:8px; }
+.baby_in>.cont>.mid>.price{height: 50px; background: #f7f7f7;}
+.baby_in>.cont>.mid>.price .left{line-height: 50px;}
+.baby_in>.cont>.mid>.price .left i{color: red; font-style: normal;}
+.baby_in>.cont>.mid>.price .right{float: right; border-left: 1px solid #ccc;padding-left: 10px; margin: 5px;}
+.baby_in>.cont>.mid>.cont{height: 83px; border-bottom: 1px dotted #ccc;}
+.baby_in>.cont>.mid>.cont .dress{height: 40px; line-height: 40px;}
+.baby_in>.cont>.mid>.cont i{color: red; font-style: normal;}
+.baby_in>.cont>.mid>.size{height: 138px; padding-top:20px; }
+.baby_in>.cont>.mid>.size p{line-height: 70px; float: left;}
+.baby_in>.cont>.mid>.size ul{ margin-left:100px;}
+.baby_in>.cont>.mid>.size li{height: 26px; line-height: 26px; padding: 0 6px; border: 1px solid #ccc; display: inline-block; margin: 3px;cursor: pointer; position: relative}
+.baby_in>.cont>.mid>.size li.red a{position: absolute;left: 0; top:0; border:2px solid #ff0000;height: 100%; width: 100%; }
+.baby_in>.cont>.mid>.num{height: 36px; margin: 10px;}
+.baby_in>.cont>.mid>.num .form{height: 34px; width: 49px; border: 1px solid #ccc; float: left; position: relative;}
+.baby_in>.cont>.mid>.num .form .tex{height: 100%; line-height: 290%; text-align: center; width: 33px; border-right: 1px solid #ccc;}
+.baby_in>.cont>.mid>.num .form .ad{height: 15px; line-height: 100%; text-align: center; width: 15px; border-bottom: 1px solid #ccc; position: absolute;right: 0;top: 0; cursor: pointer;}
+.baby_in>.cont>.mid>.num .form #sub{height: 15px; line-height: 80%; text-align: center; width: 15px; position: absolute;right: 0;bottom: 0;cursor: pointer;}
+.baby_in>.cont>.mid>.num .car{ margin-left: 20px;display:inline-block;}
+.baby_in>.cont>.right{width: 208px; float: right;}
+.baby_in>.cont>.right .pic{width: 100%; height: 80px; border-bottom: 1px solid #ccc; border-top:1px solid #ccc; overflow: hidden; margin-top: 20px;  }
+.baby_in>.cont>.right ul{padding: 10px 0 0 0;}
+.baby_in>.cont>.right li{display: inline-block; margin: 10px 0;vertical-align: top;}
