@@ -1,5 +1,11 @@
-
 $(function() {
+	setInterval(function() { 
+
+		$('section.bigBox .box').css('height', $('#box').css('width')) 
+$('section.bigBox').css('height',$('section.bigBox').css('width'))
+$('.pages').find('div').css('height',$('.pages').find('div').css('width'))
+	}, 100)
+
 	var lastX, lastY; //记录移动之前的位置
 	var u = 0;
 	var v = 0;
@@ -30,6 +36,7 @@ $(function() {
 			})
 		})
 	});
+	
 	$(document).on('mouseup', function() {
 		$('.box').unbind('mousemove');
 		$('.pic').unbind('mousemove')
@@ -47,13 +54,14 @@ window.onload = function() {
 	var cvsBox = document.getElementById('box');
 	var ctx = cvsBox.getContext('2d');
 	ctx.textAlign = 'center';
+	ctx.textBaseline = 'middle';
 	var gradient = ctx.createLinearGradient(0, 0, cvsBox.width, 0);
 	gradient.addColorStop("0", "green");
-	gradient.addColorStop("0.5", "yellow");
+	gradient.addColorStop("0.5", "blue");
 	gradient.addColorStop("1.0", "red");
 	ctx.strokeStyle = gradient;
-	ctx.font
-	ctx.strokeText('鼠标拖动旋转，滑轮控制景深，不过效果并不理想，有待完善', 250, 15)
+	ctx.font = "20px Arial";
+	ctx.strokeText('鼠标拖动旋转，滑轮控制景深，效果并不理想，有待完善', 250, 15)
 	ctx.stroke()
 
 }
