@@ -2,7 +2,7 @@
 /*改变所有a标签hover状态*/
 a:hover,a:focus{text-decoration: none;}
 /*顶部*/
-body{width: 100%;}
+body{width: 100%; overflow: hidden;}
 header{line-height: 2; background: #1f262e; color:#9f9d9e;}
 header a{color:#9f9d9e;text-align: center}
 header .left>a{padding: 0 0;}
