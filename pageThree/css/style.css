@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+body{width: 100%;}
 body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,input,form,dl,dd{margin:0; padding:0;}
 ul{list-style:none;}
 a{text-decoration:none;}
@@ -9,7 +10,7 @@ img,input{border:none;}
 html,body{height:100%; font-family:arial;}
 .inner{width:1200px; margin:0 auto;}
 
-header{position:relative; background:url(../images/oshin-slide-1.jpg) no-repeat; height:100%; background-size:cover;}
+header{position:relative; background:url(../images/oshin-slide-1.jpg) no-repeat; height:100%; background-size:100% 100%;}
 header .logo{float:left; margin:25px 0 0 2%; transition:all 2s;}
 header .logo:hover{opacity:0;}
 header nav{text-align:center; line-height:99px; width:900px;}
@@ -129,7 +130,7 @@ header nav{display:none;}
 }
 
 @media screen and (max-width:760px){
-	header{height: 50%; background-size:contain ;}
+	header{height: 50%;}
 .three .left,.three .right,.three .phone{float:none;width:70%; margin: 0 auto;}
 .six dd{width:48%;}
 
