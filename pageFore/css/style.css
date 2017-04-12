@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+.clear:after{content:"200B"; height:0;  clear:both; font-size:0; display:block;}
+.clear{*zoom:1;}
+
+
+body{background:#000; font-family:arial;}
+.wrap{width:940px; margin:0 auto;}
+header{margin-bottom:21px; height:60px; line-height:60px;}
+header .logo{float:left; color:#fff; font-weight:normal;}
+header ul{float:right;}
+header ul li{float:left; }
+header ul li a{display:inline-block; color:#4e4e4e; margin-left:35px; text-transform:uppercase;}
+header ul li:hover a{color:#fff;}
+
+.one .pic{height:402px; width:640px; float:left; overflow:hidden;}
+.font{height:387px; width:220px; float:right; background:#fff; padding:15px 40px 0; position:relative;}
+.font:before{content:""; width:0; height:0; border-width:12px 12px 12px 0; border-color:transparent #fff; border-style:solid; position:absolute; top:40px; left:-12px;}
+.font h2{font-weight:normal; height:63px; line-height:63px;  border-bottom:1px solid #000; margin-bottom:24px; text-transform:uppercase;}
+.font p{line-height:19px; width:210px; font-size:14px; font-style:italic; }
+.font span{display:block; height:85px; line-height:85px; margin-top:15px;}
+
+
+.two li{width:300px; height:402px; overflow:hidden; float:left; margin:20px 20px 0 0; position:relative;}
+.two .font:before{border-width:0 12px 12px 12px; border-color:#fff transparent; top:-12px; left:39px;}
+.two li:nth-child(3n){margin-right:0;}
+.two li:nth-child(2):before{content:url(../images/icon1.jpg); position:absolute; top:40px; right:40px;}
+.two li:nth-child(4):before{content:"Lone Village"; height:30px; width:104px; background:#fff; line-height:30px; font-size:12px; position:absolute; left:40px; top:40px; text-transform:uppercase; padding-left:10px;}
+.two li:nth-child(4):after{content:"denmark, 2013"; height:21px; width:98px; background:#fff; line-height:15px; font-size:12px; position:absolute; left:40px; top:70px; text-transform:uppercase; padding-left:10px;}
+.two li:nth-child(7) a{color:#8a8a8a;}
+.two li:nth-child(8){width:620px; margin-right:0;}
+.two li:nth-child(8):before{content:url(../images/icon2.jpg); position:absolute; top:40px; right:40px;}
+
+footer{text-align:center; font-size:30px;}
+footer i{ margin:47px 7px 0; color:#585858;}
+footer p{line-height:57px; margin-bottom:24px; color:#585858; font-size:12px;}
