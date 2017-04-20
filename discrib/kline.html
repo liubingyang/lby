@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<style type="text/css">
+	canvas{float: left;}
+	article{float: left; width: 200px; border: 1px solid #ccc; margin-left:10px ; padding: 0;}
+	article .head{border-bottom: 1px solid #ccc; height: 200px;}
+	#content{overflow: auto; width: 100%; height: 300px;}
+	
+</style>
+<html>
+
+<body>
+	<canvas id='cvs' width="900" height="500" style="background: #ccc;"></canvas>
+	<article>
+		<div class="head">
+			<p id='max'>最高：<span></span></p>
+			<p id='min'>最低：<span></span></p>
+			<p id='open'>开盘：<span></span></p>
+			<p id='close'>最新：<span></span></p>
+			<p id='win'>盈亏：<span></span></p>
+		</div>
+		<div id="content"></div>
+	</article>
+
+</body>
+
+</html>
+<script>
+	var cvs = document.getElementById('cvs')
+	var ctx = cvs.getContext("2d");
+	var arr = [0]; //模拟数据库（这个存的是绘制路径）
+	var arr2=[];//这个放的是一个个小模块；
+	var num=(Math.random()*100);
+	var arr3=[num.toFixed(2)];//模拟动态数据（这个存的是真实报价）
+	var arr4=[arr3[arr3.length-1]]
+	var x = 0; //模拟数据变化	
+	
+	var timer=setInterval(function() {//执行顺序轻易不要变
+		addArr() //增加数组值，模拟动态数据
+		clearCvs() //清除画布
+		drawTable()//绘制辅助线
+		drawText()//绘制数字
+		drawLine() //从新绘制折线
+		drawBlock()//绘制日线块
+		addContent()//右边最新报价
+		addLast()//显示最高最低值和一些其他数据
+	}, 100)
+function drawText(){//绘制数字
+		
+	ctx.font="12px Arial";
+	ctx.textAlign='center';
+	ctx.textBaseline='middle';
+	ctx.fillStyle='red';
+	ctx.fillText((arr3[arr3.length-1]*1.1).toFixed(2),15,150);
+
+	ctx.fillStyle='yellow';
+	ctx.fillText(arr3[arr3.length-1],15,250);
+
+	ctx.fillStyle='green';
+	ctx.fillText((arr3[arr3.length-1]*.9).toFixed(2),15,350);
+}
+	function clearCvs() { //清除画布
+		ctx.fillStyle = "#ccc"
+		ctx.fillRect(0, 0, cvs.width, cvs.height)
+
+	}
+
+function drawTable(){//绘制辅助线
+	ctx.beginPath();	
+	ctx.moveTo(40,150);
+	ctx.lineTo(790,150);
+	ctx.strokeStyle='red';
+	ctx.stroke();
+	
+	ctx.beginPath();	
+	ctx.moveTo(40,250);
+	ctx.lineTo(790,250);
+	ctx.strokeStyle='yellow';
+	ctx.stroke();
+	
+	ctx.beginPath();
+	ctx.moveTo(40,350);
+	ctx.lineTo(790,350);
+	ctx.strokeStyle='green';
+	ctx.stroke();	
+}
+	function addArr() { //增加数组值，模拟动态数据
+		x += Math.floor(Math.random() * 50 -25)
+		arr.push(x)
+		if(arr.length>149){
+			clearInterval(timer)
+		}
+	}
+
+	function drawLine() { //从新绘制折线	
+		ctx.beginPath();
+		ctx.moveTo(40, 250);
+		for(var i = 0; i < arr.length; i++) {
+			
+			arr[i]=arr[i]>100?100:arr[i];
+			arr[i]=arr[i]<(-100)?-100:arr[i];		
+			ctx.lineTo(40 + 5 * (i + 1), 250 + arr[i])
+		}		
+		ctx.strokeStyle='#000088'
+		ctx.stroke()
+	}
+	function drawBlock(){//绘制日线块
+		ctx.beginPath();
+		ctx.rect(850,250,31,arr[arr.length-1])
+		var color;
+		color=arr[arr.length-1]<0?'red':'green'
+		ctx.strokeStyle=color
+		ctx.stroke();
+		
+		ctx.beginPath();
+		var obj=maxmin(arr);
+		ctx.moveTo(866,250+obj.max)
+		ctx.lineTo(866,250+obj.min)
+		ctx.stroke();
+	}
+	function addContent(){//动态生成最新值
+		var res=''
+		var hou=new Date().getHours();
+		var min=new Date().getMinutes();
+		var sec=new Date().getSeconds();
+			hou=hou.length<=1?('0'+hou):hou;
+			min=min.length<=1?('0'+min):min;
+			sec=sec.length<=1?('0'+sec):sec;
+		arr3.unshift(-arr[arr.length-1])
+		var item=(num-(arr[arr.length-1]/100)*(arr3[arr3.length-1]*0.1)).toFixed(2)
+		console.log()
+			res='<div>'+hou+":"+min+":"+sec+"  ￥"+(item)+" "+Math.floor(Math.random()*100)+'手</div>'
+		arr4.unshift(item)
+		arr2.unshift(res)
+		
+		document.getElementById('content').innerHTML=arr2.join('')
+	}
+	function addLast(){//显示最高最低值和一些其他数据
+		var min,max,win,open,close;
+		
+	
+		open=arr3[arr3.length-1];
+		close=arr4[0];
+		win=(100*((close-open)/open)).toFixed(2)+'%'
+
+	var obj=maxmin(arr4)
+		$('#max span').html(obj.max);
+		$('#min span').html(obj.min);
+		$('#open span').html(open);
+		$('#close span').html(close);
+		$('#win span').html(win);
+	}
+	function maxmin(arr){//输出最大最小
+		var obj={};
+		obj.max=arr[arr.length-1];
+		obj.min=arr[arr.length-1];
+		for(var i=0;i<arr.length;i++){
+			if(arr[i]>obj.max){
+				obj.max=arr[i]
+			}
+			if(arr[i]<obj.min){
+				obj.min=arr[i]
+			}
+		}
+		return obj;
+	}
+</script>
